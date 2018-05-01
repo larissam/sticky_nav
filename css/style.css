@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  height: 600px;
+  min-height: 400px;
+  padding: 100px 1%;
+  text-align: center;
+  background-color: #F95758;
+  position: relative;
+}
+
+header h1 {
+  color: white;
+  position: relative;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #F95758;
+  text-align: center;
+}
+
+article {
+  padding: 1rem;
+}
+
+p {
+  font-family: 'Lora', serif;
+  color: #222;
+  font-size: 25px;
+  padding: 0 3rem;
+  text-align: justify;
+}
+
+#flybug {
+  text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+		M A I N   N A V   S T Y L E S
+	---------------------------------------------------------- */
+.sticky-nav-wrapper {
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 3px 11px rgba(0, 0, 0, .1);
+  transition: all 300ms ease-out;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: inline-block;
+  margin: 1rem;
+  padding: .25rem 0;
+  text-decoration: none;
+  color: #888;
+  transition: all .3s ease-in-out;
+}
+
+
+nav .active {
+  border-bottom: 2px solid #F95758;
+}
+
+
+/* ---------------------------------------------------------
+    F L Y B U G
+  ---------------------------------------------------------- */
+img {
+  width: 175px;
+}
+
+.flybug,
+.butterfly {
+  width: 400px;
+  display: block;
+  margin: 50px auto 30px;
+}
+
+.bug-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+
+/* ---------------------------------------------------------
+    YOUR CODE HERE - STICKY NAV
+  ---------------------------------------------------------- */
+
+/* NAV PART 1 - Write styles here to convert the nav into a sticky nav. */
+/* Use JS to add/remove this class to the nav based on the screen position */
+.scrolled {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+/* NAV PART 2 - in main.js. Use jQuery to add/remove the 'scrolled' class 
+on the 'sticky-nav-wrapper' based on scroll position */
+
+
+/* ---------------------------------------------------------
+    YOUR CODE HERE - FADE IN LABELS ON SCROLL
+  ---------------------------------------------------------- */
+
+/* LABELS PART 1 - Set the default CSS for the labels. */
+/* HINT: look up the 'opacity' property */
+.label-1,
+.label-2,
+.label-3 {
+  position: absolute;
+
+  /* make labels hidden by default */
+  /* add transition so the animation is smooth */
+
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.label-1 {
+  /* position the label */
+  /* HINT: what 4 properties can we use to position something absolutely?. */
+
+  top: 148px;
+  right: -116px;
+
+}
+
+.label-2 {
+  /* position the label */
+  /* HINT: what 4 properties can we use to position something absolutely?. */
+
+  top: 300px;
+  left: -116px;
+}
+
+.label-3 {
+  /* position the label */
+  /* HINT: what 4 properties can we use to position something absolutely?. */
+
+  top: 420px;
+  right: -156px;
+}
+
+/* LABELS PART 2 - Write CSS for how the labels look when they're faded in*/
+/* HINT: look up the 'opacity' property */
+/* We will use jQuery to toggle this class */
+.fade-in {
+  /* make the label visible */
+
+  opacity: 1;
+}
+
+/* LABELS PART 3 - in main.js. Use jQuery to add/remove the 'fade-in' class 
+on each label based on scroll position */
+
+
+/* ---------------------------------------------------------
+    YOUR CODE HERE - SLIDE IN BUTTERFLY ON SCROLL
+  ---------------------------------------------------------- */
+
+/* BUTTERFLY PART 1 - Uncomment the following code to hide the
+butterfly and move it slightly to the left by default.*/
+.butterfly {
+  width: 600px;
+
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: all .5s ease-in-out; 
+}
+
+/* BUTTERFLY PART 2 - Write CSS for how the butterfly looks when it's slid in*/
+/* We will use jQuery to toggle this class */
+.animated {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+/* BUTTERFLY PART 3 - in main.js. Use jQuery to add/remove the 'animated' class on the
+'butterfly' element based on scroll position */
